@@ -1,0 +1,13 @@
+@import '../stitch-support'
+
+#id
+  @include prefix(border-radius, 5px)
+  @include prefix('border-radius', 5px)
+  @include appearance(none)
+  @include background-clip(padding-box)
+
+@include keyframes(my-animation)
+  0%
+    top: 0
+  100%
+    top: 100%
