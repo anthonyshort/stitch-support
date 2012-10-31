@@ -1,7 +1,22 @@
-// Prefix properties and values 
+// Default Prefixes
 // ----------------------------------------
 
-$default-prefixes: -webkit, -moz
+$default-prefixes: -webkit, -moz !default
+$default-prefixes-appearance: -webkit, -moz !default
+$default-prefixes-background-clip: -webkit, -moz !default
+$default-prefixes-background-origin: -webkit, -moz !default
+$default-prefixes-background-size: -webkit, -moz, -o !default
+$default-prefixes-border-radius: -webkit, -moz !default
+$default-prefixes-box-shadow: -webkit, -moz !default
+$default-prefixes-box: -webkit, -moz !default
+$default-prefixes-box-sizing: -webkit, -moz !default
+$default-prefixes-columns: -webkit, -moz !default
+$default-prefixes-animation: -webkit, -moz, -o !default
+$default-prefixes-transition: -webkit, -moz, -o !default
+$default-prefixes-transform: -webkit, -moz, -o
+
+// Prefix properties and values 
+// ----------------------------------------
 
 @mixin prefix($property, $value, $prefixes: $default-prefixes)
   
@@ -40,15 +55,11 @@ $default-prefixes: -webkit, -moz
 // Appearance
 // ----------------------------------------
 
-$default-prefixes-appearance: -webkit, -moz
-
 @mixin appearance($v, $prefixes: $default-prefixes-appearance)
   @include prefix(appearance,$v,$prefixes)
 
 // Background Clip
 // ----------------------------------------
-
-$default-prefixes-background-clip: -webkit, -moz
 
 @mixin background-clip($v, $prefixes: $default-prefixes-background-clip)
   @include prefix(background-clip,$v,$prefixes)
@@ -56,25 +67,17 @@ $default-prefixes-background-clip: -webkit, -moz
 // Background Origin
 // ----------------------------------------
 
-$default-prefixes-background-origin: -webkit, -moz
-
 @mixin background-origin($v, $prefixes: $default-prefixes-background-origin) 
   @include prefix(background-origin,$v,$prefixes)
-
 
 // Background Size
 // ----------------------------------------
 
-$default-prefixes-background-size: -webkit, -moz, -o 
-
 @mixin background-size($v, $prefixes: $default-prefixes-background-size) 
   @include prefix(background-size,$v,$prefixes)
 
-
 // Border Radius
 // ----------------------------------------
-
-$default-prefixes-border-radius: -webkit, -moz 
 
 @mixin border-radius($r, $prefixes: $default-prefixes-border-radius) 
   @include prefix(border-radius,$r,$prefixes)
@@ -82,15 +85,11 @@ $default-prefixes-border-radius: -webkit, -moz
 // Box Shadow
 // ----------------------------------------
 
-$default-prefixes-box-shadow: -webkit, -moz 
-
 @mixin box-shadow($v, $prefixes: $default-prefixes-box-shadow) 
   @include prefix(box-shadow,$v,$prefixes)
 
 // Flexible Box
 // ----------------------------------------
-
-$default-prefixes-box: -webkit, -moz
 
 @mixin display-box($prefixes: $default-prefixes-box) 
   @include prefix-value(display,box,$prefixes)
@@ -122,15 +121,11 @@ $default-prefixes-box: -webkit, -moz
 // Box Sizing
 // ----------------------------------------
 
-$default-prefixes-box-sizing: -webkit, -moz
-
 @mixin box-sizing($v, $prefixes: $default-prefixes-box-sizing) 
   @include prefix(box-sizing,$v,$prefixes)
 
 // Columns
 // ----------------------------------------
-
-$default-prefixes-columns: -webkit, -moz
 
 @mixin column-count($v, $prefixes: $default-prefixes-columns) 
   @include prefix(column-count,$v,$prefixes)
@@ -156,8 +151,6 @@ $default-prefixes-columns: -webkit, -moz
 // Transforms
 // ----------------------------------------
 
-$default-prefixes-transform: -webkit, -moz, -o
-
 // @see http: //www.w3.org/TR/css3-2d-transforms/#transform-property
 @mixin transform($v, $prefixes: $default-prefixes-transform) 
   @include prefix(transform,$v,$prefixes)
@@ -182,8 +175,6 @@ $default-prefixes-transform: -webkit, -moz, -o
 // ----------------------------------------
 // @see http: //www.w3.org/TR/css3-transitions/
 
-$default-prefixes-transition: -webkit, -moz, -o
-
 @mixin transition-property($v, $prefixes: $default-prefixes-transform) 
   @include prefix(transition-property,$v,$prefixes)
 
@@ -201,8 +192,6 @@ $default-prefixes-transition: -webkit, -moz, -o
 
 // Animation
 // ----------------------------------------
-
-$default-prefixes-animation: -webkit, -moz, -o
 
 @mixin animation($v, $prefixes: $default-prefixes-animation) 
   @include prefix(animation,$v,$prefixes)
