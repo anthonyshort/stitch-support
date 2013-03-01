@@ -1,6 +1,10 @@
 {
   "name": "stitch-support",
   "version": "0.1.0",
+  "description": "Helpers for writing prefixed properties and values",
   "author": "Anthony Short",
-  "main": "_stitch-support.sas"
+  "repo": "anthonyshort/stitch-support",
+  "files": [
+    "index.scss"
+  ]
 }
